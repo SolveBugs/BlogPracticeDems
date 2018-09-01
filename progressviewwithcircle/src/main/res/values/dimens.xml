@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="px_to_dip_12">6.00dp</dimen>
+    <dimen name="px_to_dip_14">7.00dp</dimen>
+    <dimen name="px_to_dip_8">4.00dp</dimen>
+    <dimen name="px_to_dip_20">10.00dp</dimen>
+    <dimen name="px_to_dip_24">12.00dp</dimen>
+    <dimen name="px_to_dip_48">24.00dp</dimen>
+    <dimen name="px_to_dip_230">115.00dp</dimen>
+    <dimen name="px_to_dip_90">45.00dp</dimen>
+
+</resources>

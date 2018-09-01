@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8d8d8"
+    tools:context=".MainActivity">
+
+
+    <com.test.progressviewwithcircle.ProgressView
+        android:id="@+id/progress1"
+        android:layout_width="@dimen/px_to_dip_230"
+        android:layout_height="@dimen/px_to_dip_230"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px_to_dip_230"
+        app:backCircleColor="@color/RGB_E6E9ED"
+        app:backCircleWidth="@dimen/px_to_dip_8"
+        app:endCircleColor="@color/RGB_FF8209"
+        app:endCircleWidth="@dimen/px_to_dip_24"
+        app:numTextColor="@color/RGB_FF8209"
+        app:numTextSize="@dimen/px_to_dip_48"
+        app:outerCircleColor="@color/RGB_FF8209"
+        app:outerCircleWidth="@dimen/px_to_dip_14"
+        app:progress_num="1026"
+        app:progress_title="饮食摄入"
+        app:progress_unit="kcal"
+        app:titleTextColor="@color/RGB_656D78"
+        app:titleTextSize="@dimen/px_to_dip_24"
+        app:unitTextColor="@color/RGB_FF8209"
+        app:unitTextSize="@dimen/px_to_dip_24" />
+
+    <com.test.progressviewwithcircle.ProgressView
+        android:id="@+id/progress2"
+        android:layout_width="@dimen/px_to_dip_230"
+        android:layout_height="@dimen/px_to_dip_230"
+        android:layout_below="@+id/progress1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/px_to_dip_20"
+        app:backCircleColor="@color/RGB_E6E9ED"
+        app:backCircleWidth="@dimen/px_to_dip_8"
+        app:endCircleColor="@color/RGB_4FC1E9"
+        app:endCircleWidth="@dimen/px_to_dip_24"
+        app:numTextColor="@color/RGB_4FC1E9"
+        app:numTextSize="@dimen/px_to_dip_48"
+        app:outerCircleColor="@color/RGB_4FC1E9"
+        app:outerCircleWidth="@dimen/px_to_dip_14"
+        app:progress_num="16"
+        app:progress_title="运动消耗"
+        app:progress_unit="kcal"
+        app:titleTextColor="@color/RGB_656D78"
+        app:titleTextSize="@dimen/px_to_dip_24"
+        app:unitTextColor="@color/RGB_4FC1E9"
+        app:unitTextSize="@dimen/px_to_dip_24" />
+</RelativeLayout>
