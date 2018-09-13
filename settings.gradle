@@ -1,1 +1,1 @@
-include ':app', ':scrollviewwithpopwindow', ':progressviewwithcircle'
+include ':app', ':scrollviewwithpopwindow', ':progressviewwithcircle', ':bluetoothbledemo'
