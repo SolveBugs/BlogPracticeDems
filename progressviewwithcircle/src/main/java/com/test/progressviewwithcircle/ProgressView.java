@@ -47,6 +47,8 @@ public class ProgressView extends View {
 
     private float currentPercent = 0.3f;
 
+    private float edgeDistance;//背景圆与view边界的距离
+
     public ProgressView(Context context) {
         super(context);
         init(context, null);
@@ -82,6 +84,8 @@ public class ProgressView extends View {
 
             endCircleWidth = array.getDimension(R.styleable.ProgressView_endCircleWidth, getResources().getDimension(R.dimen.px_to_dip_24));
             endCircleColor = array.getColor(R.styleable.ProgressView_endCircleColor, Color.parseColor("#4fc1e9"));
+
+            edgeDistance = array.getDimension(R.styleable.ProgressView_edgeDistance, getResources().getDimension(R.dimen.px_to_dip_12));
 
             backCirclePaint = new Paint();
             backCirclePaint.setAntiAlias(true);
@@ -151,14 +155,14 @@ public class ProgressView extends View {
         int centerY = height / 2;
 
         //计算半径
-        float radius = (width / 2) - outerCircleWidth + (outerCircleWidth - backCircleWidth) / 2;
+        float radius = (width / 2) - edgeDistance;
 
-
+        //半径是圆心与画出来的圆环中间点连起来的位置
         //画背景圆
         canvas.drawCircle(centerX, centerY, radius, backCirclePaint);
 
         //根据进度话扫过一定角度的圆弧
-        RectF rectF = new RectF(outerCircleWidth / 2 + backCircleWidth / 2, outerCircleWidth / 2 + backCircleWidth / 2, width - outerCircleWidth / 2 - backCircleWidth / 2, height - outerCircleWidth / 2 - backCircleWidth / 2);
+        RectF rectF = new RectF(edgeDistance, edgeDistance, width - edgeDistance, height - edgeDistance);
         canvas.drawArc(rectF, -90, 360 * currentPercent, false, outerCirclePaint);
 
         //画三行文字
@@ -192,7 +196,7 @@ public class ProgressView extends View {
         invalidate();
     }
 
-    public void  setCurrentPercent(float currentPercent) {
+    public void setCurrentPercent(float currentPercent) {
         this.currentPercent = currentPercent;
         invalidate();
     }
